@@ -1,0 +1,210 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414; 
+    color: #fff; 
+}
+
+h1 {
+    text-align: center;
+    color: #e50914; 
+    margin: 20px 0;
+    font-size: 2.5em;
+}
+
+.inputPridej {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: calc(100% - 120px); 
+    margin: 10px 0; 
+    display: inline-block;
+    font-size: 16px;
+    background-color: #333; 
+    color: #e0e0e0;
+}
+
+
+input[type="submit"] {
+    background-color: #b81d24;
+    border: none;
+    color: white;
+    padding: 12px 20px; 
+    font-size: 16px; 
+    border-radius: 8px; 
+    cursor: pointer;
+    margin: 10px 0; 
+    display: inline-block; 
+    transition: background-color 0.3s ease;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #a61b20; 
+}
+
+
+.inputPridej input[type="submit"]:hover {
+    background-color: #b81d24; 
+}
+
+.inputZadej {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.inputZadej input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    width: 100%;
+    max-width: 400px;
+}
+
+#userList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#userList .profile-card {
+    background-color: #333;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+#userList .profile-card p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+#userList .profile-container {
+    position: relative;
+    margin-bottom: 20px; 
+}
+
+#userList .delete-button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: -60px; 
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#userList .profile-container:hover .delete-button {
+    bottom: -30px; 
+    opacity: 1;
+}
+
+#searchResults, #myMovieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-card {
+    background-color: #333;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.movie-card p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.movie-card button, .movie-card input[type="checkbox"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e50914; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.movie-card button:hover {
+    background-color: #b81d24; 
+}
+button {
+    background-color: #4CAF50; 
+    border: none; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+@media (max-width: 768px) {
+    form.inputPridej, .inputZadej {
+        flex-direction: column;
+    }
+
+    form.inputPridej input[type="text"], 
+    form.inputPridej input[type="submit"] {
+        width: 100%;
+        margin: 0;
+        border-radius: 5px;
+    }
+
+    form.inputPridej input[type="submit"] {
+        margin-top: 10px;
+    }
+
+    #userList .profile-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #userList .delete-button {
+        bottom: -60px; 
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+    
+    <button id="backToProfileListButton">Back to profile list</button>
+    <h1 id="profileName"></h1>
+    <div class="inputZadej">
+        <input type="text" id="searchInput" placeholder="Enter movie title">
+        
+    </div>
+    <div id="searchResults"></div>
+    <h2>My list:</h2>
+    <div id="myMovieList"></div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let profileName = localStorage.getItem('currentProfile');
+            document.getElementById('profileName').textContent = profileName;
+            
+        
+            let movies = JSON.parse(localStorage.getItem(`${profileName}_movies`)) || [];
+            
+        });
+    </script>
+
+
+
+<script src="movie.js"></script>
+    <script src="script.js"></script>
+    <script src="funkce.js"></script>
+</body>
+</html>
